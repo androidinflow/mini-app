@@ -3,26 +3,28 @@
 
   let user = null;
   let isReady = false;
+  let colorScheme = "light"; // Add this line to define colorScheme
 
   function showAlert() {
-    if (window.Telegram && window.Telegram.WebApp) {
+    if (window.Telegram?.WebApp) {
       window.Telegram.WebApp.showAlert("Hello from MainButton!");
     }
   }
 
   onMount(() => {
-    if (window.Telegram && window.Telegram.WebApp) {
+    if (window.Telegram?.WebApp) {
       const tg = window.Telegram.WebApp;
       tg.ready();
       user = tg.initDataUnsafe.user;
       isReady = true;
 
-      if (window.Telegram && window.Telegram.WebApp) {
-        const mainButton = window.Telegram.WebApp.MainButton;
-        mainButton.setText("Click Me!");
-        mainButton.show();
-        mainButton.onClick(showAlert);
-      }
+      // Set colorScheme based on Telegram theme
+      colorScheme = tg.colorScheme;
+
+      const mainButton = tg.MainButton;
+      mainButton.setText("Click Me!");
+      mainButton.show();
+      mainButton.onClick(showAlert);
     }
   });
 </script>
