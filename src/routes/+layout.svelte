@@ -1,6 +1,7 @@
-<main>
-  <slot />
+<script>import "../app.css";</script><main>
+  <slot></slot>
 </main>
+
 
 <style>
   :global(body) {

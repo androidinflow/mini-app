@@ -12,11 +12,18 @@
 		"@sveltejs/adapter-node": "^5.2.7",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"autoprefixer": "^10.4.20",
+		"bits-ui": "^0.21.16",
+		"clsx": "^2.1.1",
 		"svelte": "^4.2.7",
+		"tailwind-merge": "^2.5.4",
+		"tailwind-variants": "^0.2.1",
+		"tailwindcss": "^3.4.9",
 		"vite": "^5.0.3"
 	},
 	"type": "module",
 	"dependencies": {
-		"@twa-dev/sdk": "^7.10.1"
+		"@twa-dev/sdk": "^7.10.1",
+		"lucide-svelte": "^0.453.0"
 	}
 }
